@@ -1,0 +1,16 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    
+    <%- include('./partials/nav.ejs') %>
+
+    <h2>Add a Book</h2>
+    <form action="/books" method="POST">
+        <label for="author" >Book Title</label>
+        <input type="text" id='title' name="title" required>
+        <label for="author" class="author">Book Author</label>
+        <input type="text" id="author" name="author" required>
+        <button>Add</button>
+    </form>
+</body>
+</html>
