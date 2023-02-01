@@ -1,0 +1,33 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+
+    <%- include('./partials/nav.ejs') %>
+
+        <% if(books.length > 0) {    
+            books.map(book => { 
+        %>
+            <div class="book">
+                <div class="bookInfo">
+                    <h3 class="title-header">Book Title</h3><span class="title"><%=book.title %></span>
+                    <h3 class="author-header">Author</h3><span class="author"><%= book.author %></span>
+                </div>
+                
+                
+                <form action="/books/<%=book._id %>?_method=DELETE" method="POST">
+                    <button type="submit" class="deleteBtn">Delete</button>    
+                </form>
+            </div>
+
+        <% }) %>
+        <% }else { %>
+            <p class="no-books-text">No books</p>
+        <% } %>
+
+        <%
+            const apiUrl = 'https://www.goodreads.com/search.xml'
+        %>
+    
+
+</body>
+</html>
