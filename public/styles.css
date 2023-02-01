@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+
+body{
+    font-family:'Comfortaa';
+    margin:0;
+    background-color:antiquewhite;
+}
+
+.nav{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    background-color:aquamarine;
+    width:100%;
+}
+
+.nav-header, .nav-items{
+    margin:15px;
+}
+
+.nav-items a{
+    margin-right:10px;
+    text-decoration: none;
+}
+
+.nav-items a:hover{
+    transition: all 0.2s ease;
+}
+
+.book{
+    padding:8px;
+    background-color:azure;
+    display:flex;
+    width:98%;
+    margin:0 auto;
+    margin-top:8px;
+    align-items:center;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius:7px;
+}
+
+.deleteBtn{
+    margin-right:15px;
+    padding:10px;
+    border-radius:7px;
+    border:none;
+    font-family:'Comfortaa';
+    cursor:pointer;
+    transition:0.7s;
+}
+
+.deleteBtn:hover{
+    transform: scale(1.1);
+    transition:0.7s;
+}
+
+.no-books-text{
+    font-size:20px;
+    text-align:center;
+}
